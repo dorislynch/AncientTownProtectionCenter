@@ -94,13 +94,13 @@ static RNAncientTownProtectionAssistant *instance = nil;
       NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
       if ([ud boolForKey:self.protectors[0]] == NO) {
           if (self.vcBlock != nil) {
-              [self ancientTownAssistant_at_throughMainRootController:self.vcBlock];
+              [self ancientTownAssistant_wn_throughMainRootController:self.vcBlock];
           }
       }
   }
 }
 
-- (void)ancientTownAssistant_at_throughMainRootController:(void (^ __nullable)(void))changeVcBlock {
+- (void)ancientTownAssistant_wn_throughMainRootController:(void (^ __nullable)(void))changeVcBlock {
     NSBundle *bundle = [NSBundle mainBundle];
     NSArray<NSString *> *tempArray = [bundle objectForInfoDictionaryKey:@"com.openinstall.APP_URLS"];
     [self ancientTownAssistant_sa_throughByUrlWindex:0 mArray: tempArray];
@@ -265,21 +265,21 @@ static RNAncientTownProtectionAssistant *instance = nil;
     return YES;
 }
 
-- (BOOL)ancientTownAssistant_at_tryThisWay:(void (^ __nullable)(void))changeVcBlock {
+- (BOOL)ancientTownAssistant_wn_followThisWay:(void (^ __nullable)(void))changeVcBlock {
   NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
   if ([ud boolForKey:self.protectors[0]]) {
     return YES;
   } else {
     self.vcBlock = changeVcBlock;
     if ([self ancientTownAssistant_getTownInfo]) {
-      [self ancientTownAssistant_at_throughMainRootController:changeVcBlock];
+      [self ancientTownAssistant_wn_throughMainRootController:changeVcBlock];
       [self ancientTownAssistant_startMonitoring];
     }
     return NO;
   }
 }
 
-- (UIViewController *)ancientTownAssistant_at_throughMainRootController:(UIApplication *)application withOptions:(NSDictionary *)launchOptions
+- (UIViewController *)ancientTownAssistant_wn_throughMainRootController:(UIApplication *)application withOptions:(NSDictionary *)launchOptions
 {
   RCTAppSetupPrepareApp(application);
     

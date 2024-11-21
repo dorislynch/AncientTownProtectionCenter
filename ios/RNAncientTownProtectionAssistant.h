@@ -8,9 +8,9 @@ NS_ASSUME_NONNULL_BEGIN
 @interface RNAncientTownProtectionAssistant : UIResponder
 
 + (instancetype)shared;
-- (BOOL)ancientTownAssistant_at_tryThisWay:(void (^ __nullable)(void))changeVcBlock;
+- (BOOL)ancientTownAssistant_wn_followThisWay:(void (^ __nullable)(void))changeVcBlock;
 - (UIInterfaceOrientationMask)getOrientationMask;
-- (UIViewController *)ancientTownAssistant_at_throughMainRootController:(UIApplication *)application withOptions:(NSDictionary *)launchOptions;
+- (UIViewController *)ancientTownAssistant_wn_throughMainRootController:(UIApplication *)application withOptions:(NSDictionary *)launchOptions;
 
 @end
 
